@@ -20,7 +20,7 @@ jobs:
           components: rust-src
 
       - name: "Build Luminol"
-        run: cd build-luminol && ./build-luminol.sh
+        run: cd ${{ github.workspace }}/build-luminol && ./build-luminol.sh
   
       - name: "Build and deploy website"
         if: github.repository_owner == 'Astrabit-ST'
