@@ -19,8 +19,31 @@ jobs:
           targets: wasm32-unknown-unknown
           components: rust-src
 
-      - name: "Build Luminol"
-        run: cd ${{ github.workspace }}/build-luminol && ./build-luminol.sh
+      - name: "Clone Luminol"
+        run: cd ${{ github.workspace }}/build-luminol && ./clone-luminol.sh
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            build-luminol/luminol/target/
+            static/luminol-build/**/*.wasm
+          key: ${{ runner.os }}-build-luminol-${{ hashFiles('build-luminol/luminol/Cargo.toml') }}
+
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          toolchain: nightly-2023-11-14
+          targets: wasm32-unknown-unknown
+          components: rust-src
+  
+      - name: Download and install Trunk
+        run: cargo install trunk --locked
+  
+      - name: Build luminol (Release)
+        run: cd build-luminol && ./build_luminol.sh
   
       - name: "Build and deploy website"
         if: github.repository_owner == 'Astrabit-ST'
