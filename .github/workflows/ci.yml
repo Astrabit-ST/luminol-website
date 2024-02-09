@@ -39,7 +39,7 @@ jobs:
             ~/.cargo/registry/cache/
             ~/.cargo/git/db/
             build-luminol/luminol/target/
-            content/luminol-build/**/*.wasm
+            static/luminol-build/**/*.wasm
           key: ${{ runner.os }}-build-luminol-${{ hashFiles('build-luminol/luminol/Cargo.toml') }}
 
       - uses: dtolnay/rust-toolchain@nightly
@@ -58,7 +58,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: luminol-build
-          path: ${{ github.workspace }}/content/luminol-build
+          path: ${{ github.workspace }}/static/luminol-build
 
   build-website:
     runs-on: ubuntu-latest
@@ -67,7 +67,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: luminol-build
-          path: content/luminol-build
+          path: static/luminol-build
   
       - name: "Build website"
         uses: shalzz/zola-deploy-action@v0.16.1-1
