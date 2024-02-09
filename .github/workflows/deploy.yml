@@ -20,7 +20,7 @@ jobs:
           components: rust-src
 
       - name: "Clone Luminol"
-        run: cd ${{ github.workspace }}/build-luminol && ./clone-luminol.sh
+        run: cd ${{ github.workspace }}/build-luminol && ./clone_luminol.sh
 
       - uses: actions/cache@v4
         with:
