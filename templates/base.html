@@ -1,0 +1,61 @@
+{% import "macros/header.html" as header_macros %}
+<!--
+ Copyright (c) 2024 Lily Lyons
+ 
+ This software is released under the MIT License.
+ https://opensource.org/licenses/MIT
+-->
+
+{% set current_path = current_path | default(value="/") %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Luminol</title>
+
+  <link rel="stylesheet" href="/site.css" />
+  <meta property="og:url" content="https://luminol.dev">
+  <meta property="og:url" content="Luminol is a FOSS remake of RPG Maker!">
+  {% block head_extensions %} {% endblock %}
+</head>
+
+<body>
+  <div class="layout">
+    <header class="layout__header header">
+      <div class="header__content">
+        <div class="header__left-block">
+          <a href="/" class="header__logo">
+            <img class="logo" src="/assets/luminol.svg" alt="A beaker filled with a glowing liquid">
+          </a>
+        </div>
+        <nav class="header__menu main-menu" role="navigation" data-page-menu-switch-state-container>
+
+          <div class="main-menu__content">
+            <ul class="main-menu__menu">
+              {{header_macros::header_item(name="Web Build", current_path=current_path,
+              path="/luminol-build/index.html")}}
+              {{header_macros::header_item(name="News", current_path=current_path)}}
+            </ul>
+          </div>
+        </nav>
+        <div class="header__cta-content">
+          <a class="header__cta header__cta--github" href="https://github.com/Astrabit-ST/Luminol">
+            <img src="https://cdn.simpleicons.org/github/white" alt="The GitHub logo">
+          </a>
+          <a class="header__cta header__cta--steam" href="https://github.com/Astrabit-ST/Luminol">
+            <img src="https://cdn.simpleicons.org/steam/white" alt="The Steam logo">
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="layout__content">
+      <div class="container">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

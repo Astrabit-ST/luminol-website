@@ -1,0 +1,65 @@
+// Copyright (c) 2024 Lily Lyons
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+.main-menu {
+  &__menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__entry {
+    list-style: none;
+  }
+
+  &__link {
+    @include flex-center;
+
+    $color-blue: #b1d9ff;
+
+    position: relative;
+    height: var(--header-height);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    &,
+    &:visited,
+    &:active {
+      color: $color-white;
+    }
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &--active {
+
+      &,
+      &:visited,
+      &:active {
+        color: $color-blue;
+      }
+    }
+
+    // Having the focus outline on the header link directly looks weird,
+    // because it is cut off at the top
+    &:focus-visible {
+      outline: none;
+    }
+
+    // Instead we have the outline on the text inside the link
+    &:focus-visible span {
+      border-radius: 5px;
+      outline: $focus-outline;
+    }
+
+    padding: 0 8px;
+    height: var(--header-height);
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}

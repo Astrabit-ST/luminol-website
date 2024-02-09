@@ -1,0 +1,19 @@
+// Copyright (c) 2024 Lily Lyons
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+@charset "utf-8";
+
+@import "vars";
+@import "mixins";
+
+@import "components/logo";
+@import "components/main-menu";
+@import "components/layout";
+@import "components/header";
+
+body {
+  padding: 0;
+  margin: 0;
+}
