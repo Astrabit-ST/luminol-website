@@ -48,8 +48,10 @@ jobs:
           targets: wasm32-unknown-unknown
           components: rust-src
 
-      - name: Download and install Trunk
-        run: cargo install trunk --locked
+      # Cargo will error if we try to install the same binary multiple times, so we bypass cargo
+      # (No idea why, it doesn't happen in my testing)
+      - name: Download and install Trunk binary
+        run: wget -qO- https://github.com/trunk-rs/trunk/releases/download/v0.18.7/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf- -C ~/.cargo/bin
 
       - name: Build luminol (Release)
         run: cd build-luminol && ./build_luminol.sh
