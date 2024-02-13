@@ -5,7 +5,6 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
-git init luminol
+git clone --depth=1 https://github.com/Astrabit-ST/Luminol luminol 
 cd luminol
-git remote add origin https://github.com/Astrabit-ST/Luminol
 git pull --depth=1 origin dev
