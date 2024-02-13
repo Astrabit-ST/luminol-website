@@ -10,4 +10,5 @@
 cd luminol
 
 ~/.cargo/bin/trunk build --release
-mv dist ../../static/luminol-build
+mkdir ../../static/luminol-build -p
+cp dist/* ../../static/luminol-build -r
