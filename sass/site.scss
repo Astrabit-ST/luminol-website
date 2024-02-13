@@ -8,10 +8,28 @@
 @import "vars";
 @import "mixins";
 
+@import "fonts/ubuntu";
+
 @import "components/logo";
 @import "components/main-menu";
 @import "components/layout";
 @import "components/header";
+@import "components/button";
+
+html {
+  color-scheme: dark;
+  font-family: 'Ubuntu', sans-serif;
+  color: $color-white;
+  background-color: $color-background;
+
+  scroll-padding-top: var(--scroll-padding-top);
+
+  * {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+}
 
 body {
   padding: 0;

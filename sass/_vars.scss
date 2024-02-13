@@ -3,9 +3,8 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-$bp-tablet-landscape: 992px; // Tablet-landscape (and larger)
-
-$bp-tablet-portrait-down: '(max-width: #{$bp-tablet-landscape - 1})';
+$color-highlight: #4287f5;
+$color-background: #01020e;
 
 $color-white: #ececec;
 $color-grey-800: #232326;
@@ -23,7 +22,7 @@ $duration: 250ms;
 $max-width: 1200px;
 $mobile-menu-width: 300px;
 $content-top-margin: 30px;
-$border-radius: 10px;
+$border-radius: 7.5px;
 
 :root {
   --header-height: 64px;

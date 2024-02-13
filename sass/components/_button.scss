@@ -1,0 +1,38 @@
+// Copyright (c) 2024 Lily Lyons
+// 
+// This software is released under the MIT License.
+// https://opensource.org/licenses/MIT
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  background-color: $color-highlight;
+  border: 2px solid #56adff;
+  padding: 6px 8px;
+  border-radius: $border-radius;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: transform $duration-fast;
+
+  &:hover {
+    background-color: darken($color-highlight, 3%);
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+
+  &,
+  &:hover,
+  &:visited {
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  &__icon {
+    height: 1.1em;
+    vertical-align: middle;
+    margin-left: 0.2em;
+    font-size: 0.9em;
+  }
+}

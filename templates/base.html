@@ -16,8 +16,13 @@
   <title>Luminol</title>
 
   <link rel="stylesheet" href="/site.css" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <meta property="og:url" content="https://luminol.dev">
   <meta property="og:url" content="Luminol is a FOSS remake of RPG Maker!">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   {% block head_extensions %} {% endblock %}
 </head>
 
@@ -25,13 +30,14 @@
   <div class="layout">
     <header class="layout__header header">
       <div class="header__content">
+
         <div class="header__left-block">
           <a href="/" class="header__logo">
-            <img class="logo" src="/assets/luminol.svg" alt="A beaker filled with a glowing liquid">
+            <img class="logo" src="/assets/luminol_library_logo.png" alt="A spilled beaker with glowing liquid">
           </a>
         </div>
-        <nav class="header__menu main-menu" role="navigation" data-page-menu-switch-state-container>
 
+        <nav class="header__menu main-menu" role="navigation" data-page-menu-switch-state-container>
           <div class="main-menu__content">
             <ul class="main-menu__menu">
               {{header_macros::header_item(name="Web Build", current_path=current_path,
@@ -40,21 +46,25 @@
             </ul>
           </div>
         </nav>
-        <div class="header__cta-content">
-          <a class="header__cta header__cta--github" href="https://github.com/Astrabit-ST/Luminol">
-            <img src="https://cdn.simpleicons.org/github/white" alt="The GitHub logo">
+
+        <div class="header__cta-container">
+          <a class="header__cta header__cta--icon" href="https://github.com/Astrabit-ST/Luminol">
+            <img src="https://cdn.simpleicons.org/github/4287f5" alt="The GitHub logo">
           </a>
-          <a class="header__cta header__cta--steam" href="https://github.com/Astrabit-ST/Luminol">
-            <img src="https://cdn.simpleicons.org/steam/white" alt="The Steam logo">
+          <a class="header__cta header__cta--icon" href="https://store.steampowered.com/app/2501490/Luminol/">
+            <img src="https://cdn.simpleicons.org/steam/4287f5" alt="The Steam logo">
           </a>
         </div>
+
       </div>
     </header>
+
     <main class="layout__content">
       <div class="container">
         {% block content %}{% endblock %}
       </div>
     </main>
+
   </div>
 </body>
 

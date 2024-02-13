@@ -29,10 +29,10 @@
 
   &__message {
     display: none;
-    font-size: 1.28rem;
+    font-size: 1.3rem;
     font-weight: 500;
     color: #797979;
-    margin-left: 12px;
+    margin-left: 16px;
     white-space: nowrap;
 
     @media (min-width: 550px) {
@@ -47,37 +47,25 @@
   &__cta-container {
     display: flex;
     align-items: center;
-    margin-left: 16px;
+    margin-left: 32px;
   }
 
   &__cta {
     flex-shrink: 0;
 
     &:not(:last-child) {
-      margin-right: 8px;
+      margin-right: 16px;
     }
 
-    &--github {
-      @include flex-center;
+    &--icon {
+      @include center;
 
       img {
         height: 30px;
       }
 
-      &:hover {
-        filter: brightness(80%)
-      }
-    }
-
-    &--steam {
-      @include flex-center;
-
-      img {
-        height: 30px;
-      }
-
-      &:hover {
-        filter: brightness(80%)
+      &:not(:hover) {
+        filter: grayscale(100%) brightness(180%)
       }
     }
   }
