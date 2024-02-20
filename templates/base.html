@@ -40,9 +40,13 @@
         <nav class="header__menu main-menu" role="navigation" data-page-menu-switch-state-container>
           <div class="main-menu__content">
             <ul class="main-menu__menu">
-              {{header_macros::header_item(name="Web Build", current_path=current_path,
+              {{header_macros::header_item(name="Web Build",
+              current_path=current_path,
               path="/luminol-build/index.html")}}
-              {{header_macros::header_item(name="News", current_path=current_path)}}
+              {{header_macros::header_item(name = "FAQ",
+              current_path=current_path)}}
+              {# {{header_macros::header_item(name="News",
+              current_path=current_path)}} #}
             </ul>
           </div>
         </nav>
