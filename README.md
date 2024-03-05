@@ -3,7 +3,7 @@ This is the source of [lumiol.dev](https://luminol.dev), the Luminol website!
 I (Speak2Erase) am pretty new to web development in general so a lot of this repository is based off of the [bevy website](https://github.com/bevyengine/bevy-website).
 
 ## Building
-This project uses zola (mainly becuase bevy's website uses it, but also because it'd allow us to write markdown for any news articles)
+This project uses zola (mainly because bevy's website uses it, but also because it'd allow us to write markdown for any news articles)
 
 To build the project, all you need to do is run `zola serve`! 
 
