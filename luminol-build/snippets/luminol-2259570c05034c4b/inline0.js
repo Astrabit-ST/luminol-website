@@ -1,0 +1,1 @@
+let report = null; export function get_panic_report() { return report; }; export function set_panic_report(r) { report = r; window.restartLuminol(); };
