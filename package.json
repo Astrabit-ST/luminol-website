@@ -11,6 +11,7 @@
   "dependencies": {
     "@types/intrinsic-scale": "^3.0.3",
     "dompurify": "^3.1.5",
+    "feed": "^4.2.2",
     "intrinsic-scale": "^3.0.4",
     "lucide-react": "^0.364.0",
     "marked": "^13.0.2",
