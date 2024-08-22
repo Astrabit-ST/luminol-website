@@ -11,4 +11,4 @@ cd luminol
 
 ~/.cargo/bin/trunk build --release
 mkdir ../../public/luminol-build -p
-cp dist/* ../../public/luminol-build -r
+cp crates/launcher/dist/* ../../public/luminol-build -r
