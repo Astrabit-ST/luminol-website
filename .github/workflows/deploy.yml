@@ -35,7 +35,7 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@nightly
         with:
-          toolchain: nightly-2024-05-19
+          toolchain: nightly-2025-01-04
           targets: wasm32-unknown-unknown
           components: rust-src
 
