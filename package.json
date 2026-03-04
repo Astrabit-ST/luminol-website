@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/intrinsic-scale": "^3.0.3",
-    "dompurify": "^3.2.4",
+    "dompurify": "^3.3.1",
     "feed": "^4.2.2",
     "intrinsic-scale": "^3.0.4",
     "lucide-react": "^0.364.0",
@@ -23,7 +23,7 @@
     "sass": "^1.72.0"
   },
   "devDependencies": {
-    "@types/dompurify": "^3.0.5",
+    "@types/dompurify": "^3.2.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
